@@ -11,12 +11,12 @@ public class Main {
 
   // use object orientated programmging structure
 
-  public void insertContact(String name, String phoneNumber) {
+  public void addContact(String name, String phoneNumber) {
     contacts.put(name, phoneNumber);
     System.out.println("Contact added: " + name + " - " + phoneNumber);
   }
 
-  public void searchContact(String name) {
+  public void searchByName(String name) {
     String phoneNumber = contacts.get(name);
     if(phoneNumber != null) {
       System.out.println("Phone number for " + name + ": " +phoneNumber);
@@ -52,12 +52,12 @@ public class Main {
           String name = scanner.nextLine();
           System.out.print("Type Phone Number: ");
           String phoneNumber = scanner.nextLine();
-          Main.insertContact(name, phoneNumber);
+          Main.addContact(name, phoneNumber);
           break;
         case 2:
           System.out.print("Enter name to search: ");
-          Main searchName = scanner.nextLine();
-          Main.searchContact(searchName);
+          String searchName = scanner.nextLine();
+          Main.searchByName(searchName);
           break;
         case 3:
           System.out.print("Type name to delete: ");
