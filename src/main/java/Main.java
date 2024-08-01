@@ -1,6 +1,6 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.HashMap; // Import the HashMap class
+import java.util.Map; // Map interface in Java
+import java.util.Scanner; // import Scanner class
 
 public class Main {
   private Map<String, String> contacts;
@@ -38,12 +38,12 @@ public class Main {
     Main Main = new Main();
     Scanner scanner = new Scanner(System.in); // Scanner class in Java. Ask for user input
     while (true) {  // While true loop in java. infinite loop in java while boolean is tru
-      System.out.println("\nAddress Book Menu:");
-      System.out.println("1. Add Contact");
-      System.out.println("2. Search by Name");
-      System.out.println("3. Delete Contact");
-      System.out.println("4. Exit");
-      System.out.print("Enter your choice: ");
+      System.out.println("\nAddress Book Menu:"); // menu
+      System.out.println("1. Add Contact"); // menu
+      System.out.println("2. Search by Name"); // menu
+      System.out.println("3. Delete Contact"); // menu
+      System.out.println("4. Exit"); // menu
+      System.out.print("Enter your choice: "); // menu
       int choice = scanner.nextInt();
       scanner.nextLine(); // Consume newline
       switch (choice) { // initialize switch statement in java is a multi-way branch statement
@@ -68,7 +68,7 @@ public class Main {
           System.out.println("Exiting...");
           System.exit(0);
           break;
-        default:
+        default: // Java default keyword
           System.out.println("Invalid Choice!");
       }
     }
