@@ -11,21 +11,21 @@ public class Main {
 
   // use object orientated programmging structure
 
-  public void addContact(String name, String phoneNumber) {
+  public void addContact(String name, String phoneNumber) { // the method is visible and can be called from outside the class
     contacts.put(name, phoneNumber);
     System.out.println("Contact added: " + name + " - " + phoneNumber);
   }
 
-  public void searchByName(String name) {
-    String phoneNumber = contacts.get(name);
+  public void searchByName(String name) { // the method is visible and be calle dfrom outside the clas
+    String phoneNumber = contacts.get(name); // initilize string
     if(phoneNumber != null) {
-      System.out.println("Phone number for " + name + ": " +phoneNumber);
+      System.out.println("Phone number for " + name + ": " +phoneNumber); // print System.out.println statement
     } else {
       System.out.println("Contact not found: " + name);
     }
   }
 
-  public void deleteContact(String name) {
+  public void deleteContact(String name) { // the method is visible and be called from outside the class
     String phoneNumber = contacts.remove(name);
     if (phoneNumber != null) {
       System.out.println("Contact deleted: " + name);
@@ -36,8 +36,8 @@ public class Main {
 
   public static void main(String[] args) {
     Main Main = new Main();
-    Scanner scanner = new Scanner(System.in);
-    while (true) {
+    Scanner scanner = new Scanner(System.in); // Scanner class in Java. Ask for user input
+    while (true) {  // While true loop in java. infinite loop in java while boolean is tru
       System.out.println("\nAddress Book Menu:");
       System.out.println("1. Add Contact");
       System.out.println("2. Search by Name");
@@ -46,10 +46,10 @@ public class Main {
       System.out.print("Enter your choice: ");
       int choice = scanner.nextInt();
       scanner.nextLine(); // Consume newline
-      switch (choice) {
-        case 1:
+      switch (choice) { // initialize switch statement in java is a multi-way branch statement
+        case 1: // case keyword in java
           System.out.print("Type name (Enter name): ");
-          String name = scanner.nextLine();
+          String name = scanner.nextLine(); 
           System.out.print("Type Phone Number: ");
           String phoneNumber = scanner.nextLine();
           Main.addContact(name, phoneNumber);
